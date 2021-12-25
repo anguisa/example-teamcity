@@ -8,6 +8,7 @@
       <runner id="RUNNER_1" name="Build master" type="Maven2">
         <conditions>
           <equals name="teamcity.build.branch" value="master" />
+          <does-not-equal name="teamcity.build.triggeredBy.username" value="admin" />
         </conditions>
         <parameters>
           <param name="goals" value="clean deploy" />
